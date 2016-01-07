@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var videoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        
+        self.setupView()
+        
+       
+        }
+        
+        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -21,5 +31,27 @@ class ViewController: UIViewController {
     }
 
 
+//setup to play video file
+func setupView() {
+    
+    let path = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("introVideo", ofType: "mov")!)
+    
+    let player = AVPlayer(URL: path)
+    
+    let newLayer = AVPlayerLayer(player: player)
+    newLayer.frame = self.videoView.frame
+    self.videoView.layer.addSublayer(newLayer)
+    newLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+    
+    player.play()
+    
+    
 }
+
+
+}
+
+
+
+
 
