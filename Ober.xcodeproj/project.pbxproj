@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A87842371C3F2D3E00EB9A1E /* TheGame.mov in Resources */ = {isa = PBXBuildFile; fileRef = A87842361C3F2D3E00EB9A1E /* TheGame.mov */; };
+		A87B9FBC1C3F40B000C4B8B7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9FBB1C3F40B000C4B8B7 /* SignUpViewController.swift */; };
 		A8F0293D1C3E50F100ED95AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0293C1C3E50F100ED95AE /* AppDelegate.swift */; };
 		A8F0293F1C3E50F100ED95AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0293E1C3E50F100ED95AE /* ViewController.swift */; };
 		A8F029421C3E50F100ED95AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F029401C3E50F100ED95AE /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		A87842361C3F2D3E00EB9A1E /* TheGame.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = TheGame.mov; sourceTree = "<group>"; };
+		A87B9FBB1C3F40B000C4B8B7 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A8F029391C3E50F100ED95AE /* Ober.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ober.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F0293C1C3E50F100ED95AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8F0293E1C3E50F100ED95AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				A8F0293C1C3E50F100ED95AE /* AppDelegate.swift */,
 				A8F0293E1C3E50F100ED95AE /* ViewController.swift */,
+				A87B9FBB1C3F40B000C4B8B7 /* SignUpViewController.swift */,
 				A8F029401C3E50F100ED95AE /* Main.storyboard */,
 				A8F029431C3E50F100ED95AE /* Assets.xcassets */,
 				A8F029451C3E50F100ED95AE /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A87B9FBC1C3F40B000C4B8B7 /* SignUpViewController.swift in Sources */,
 				A8F0293F1C3E50F100ED95AE /* ViewController.swift in Sources */,
 				A8F0293D1C3E50F100ED95AE /* AppDelegate.swift in Sources */,
 			);
