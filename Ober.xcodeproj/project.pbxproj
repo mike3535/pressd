@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A87842371C3F2D3E00EB9A1E /* TheGame.mov in Resources */ = {isa = PBXBuildFile; fileRef = A87842361C3F2D3E00EB9A1E /* TheGame.mov */; };
 		A8F0293D1C3E50F100ED95AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0293C1C3E50F100ED95AE /* AppDelegate.swift */; };
 		A8F0293F1C3E50F100ED95AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0293E1C3E50F100ED95AE /* ViewController.swift */; };
 		A8F029421C3E50F100ED95AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F029401C3E50F100ED95AE /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A87842361C3F2D3E00EB9A1E /* TheGame.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = TheGame.mov; sourceTree = "<group>"; };
 		A8F029391C3E50F100ED95AE /* Ober.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ober.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F0293C1C3E50F100ED95AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8F0293E1C3E50F100ED95AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				A8F029451C3E50F100ED95AE /* LaunchScreen.storyboard */,
 				A8F029481C3E50F100ED95AE /* Info.plist */,
 				A8F029671C3E5B2D00ED95AE /* introVideo.mov */,
+				A87842361C3F2D3E00EB9A1E /* TheGame.mov */,
 			);
 			path = Ober;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				A8F029681C3E5B2D00ED95AE /* introVideo.mov in Resources */,
 				A8F029441C3E50F100ED95AE /* Assets.xcassets in Resources */,
 				A8F029421C3E50F100ED95AE /* Main.storyboard in Resources */,
+				A87842371C3F2D3E00EB9A1E /* TheGame.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +359,7 @@
 				A8F0294D1C3E50F100ED95AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
