@@ -3,13 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ober" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cover" id="BYZ-38-t0r" customClass="ViewController" customModule="Pressd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,11 +24,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1078" y="-408"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--SignIn-->
         <scene sceneID="GJV-HF-Akr">
             <objects>
-                <viewController storyboardIdentifier="signUp" id="J9u-Mw-tbl" customClass="SignUpViewController" customModule="Ober" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" id="J9u-Mw-tbl" customClass="SignUpViewController" customModule="Pressd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NrX-Sj-t7e"/>
                         <viewControllerLayoutGuide type="bottom" id="V0h-d4-yYH"/>
@@ -38,32 +38,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTe-6P-ny5">
-                                <rect key="frame" x="223" y="97" width="155" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fDf-21-MV4">
-                                <rect key="frame" x="223" y="148" width="155" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pressd1.png" translatesAutoresizingMaskIntoConstraints="NO" id="TKs-L0-e05">
+                                <rect key="frame" x="0.0" y="64" width="600" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163" id="dNF-Zy-LG4"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fXx-dd-sRL">
+                                <rect key="frame" x="203" y="251" width="194" height="190"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username             " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTe-6P-ny5">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password              " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fDf-21-MV4">
+                                        <rect key="frame" x="0.0" y="40" width="194" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password             " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNr-l0-rMY">
+                                        <rect key="frame" x="0.0" y="80" width="194" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email              " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzz-kd-LUq">
+                                        <rect key="frame" x="0.0" y="120" width="194" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Email             " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-st-WTc">
+                                        <rect key="frame" x="0.0" y="160" width="194" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="QTe-6P-ny5" secondAttribute="trailing" constant="202" id="0VF-Y1-0rm"/>
-                            <constraint firstItem="fDf-21-MV4" firstAttribute="top" secondItem="QTe-6P-ny5" secondAttribute="bottom" constant="21" id="NjC-of-pUQ"/>
-                            <constraint firstItem="QTe-6P-ny5" firstAttribute="top" secondItem="NrX-Sj-t7e" secondAttribute="bottom" constant="33" id="OHN-TU-vhE"/>
-                            <constraint firstItem="fDf-21-MV4" firstAttribute="leading" secondItem="hkK-iJ-qCK" secondAttribute="leadingMargin" constant="203" id="j8Y-G2-jpL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fDf-21-MV4" secondAttribute="trailing" constant="202" id="kaX-Fi-GdZ"/>
-                            <constraint firstItem="QTe-6P-ny5" firstAttribute="leading" secondItem="hkK-iJ-qCK" secondAttribute="leadingMargin" constant="203" id="oZV-J0-Rzn"/>
-                            <constraint firstItem="QTe-6P-ny5" firstAttribute="top" secondItem="NrX-Sj-t7e" secondAttribute="bottom" constant="33" id="rN3-72-jh0"/>
+                            <constraint firstItem="fXx-dd-sRL" firstAttribute="top" secondItem="TKs-L0-e05" secondAttribute="bottom" constant="24" id="UtI-BL-xFM"/>
+                            <constraint firstItem="TKs-L0-e05" firstAttribute="top" secondItem="NrX-Sj-t7e" secondAttribute="bottom" id="XAu-Jo-E6B"/>
+                            <constraint firstItem="fXx-dd-sRL" firstAttribute="centerX" secondItem="hkK-iJ-qCK" secondAttribute="centerX" id="j7u-gZ-9Z9"/>
+                            <constraint firstItem="TKs-L0-e05" firstAttribute="centerX" secondItem="fXx-dd-sRL" secondAttribute="centerX" id="nx5-UG-N50"/>
+                            <constraint firstItem="TKs-L0-e05" firstAttribute="leading" secondItem="hkK-iJ-qCK" secondAttribute="leading" id="oTw-i6-gam"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oEx-ns-eXh">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="hnj-eu-O9H"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="2Wu-Ih-b9g"/>
+                    <navigationItem key="navigationItem" title="SignIn" id="oEx-ns-eXh">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="hnj-eu-O9H">
+                            <connections>
+                                <action selector="cancel:" destination="J9u-Mw-tbl" id="Jb2-Q8-Rjh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="2Wu-Ih-b9g">
+                            <connections>
+                                <action selector="done:" destination="J9u-Mw-tbl" id="hMC-kg-ZBp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="fzz-kd-LUq" id="19E-Cp-VTG"/>
+                        <outlet property="emailCheck" destination="A6G-st-WTc" id="NKX-dR-sZS"/>
+                        <outlet property="password" destination="fDf-21-MV4" id="AUh-WE-ozU"/>
+                        <outlet property="passwordCheck" destination="vNr-l0-rMY" id="owN-Np-sVH"/>
+                        <outlet property="username" destination="QTe-6P-ny5" id="9e2-Mg-6nw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gd8-pS-NKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,4 +128,7 @@
             <point key="canvasLocation" x="1019" y="300"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pressd1.png" width="851" height="315"/>
+    </resources>
 </document>
