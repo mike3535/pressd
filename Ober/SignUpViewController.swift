@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import Bolts
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController , UITextFieldDelegate {
 
     
     @IBOutlet weak var username: UITextField!
@@ -42,6 +42,13 @@ class SignUpViewController: UIViewController {
         
         self.determineSignInOrRegister()
         
+        
+        //code to remove keyboard
+        self.username.delegate = self
+        self.password.delegate = self
+        self.email.delegate = self
+        self.passwordCheck.delegate = self
+        self.emailCheck.delegate = self
         
         
         
@@ -80,7 +87,7 @@ class SignUpViewController: UIViewController {
             //check for matching email and password
             if self.email.text != self.emailCheck.text || self.password.text != self.passwordCheck.text{
                 
-                self.showAlert("Password or Email not matching", message: "Make sure Password and Email are the same")
+                self.showAlert("Password or Email not matching", message: "Make sure Password and Email are both matching")
                 
             }else{
                 
@@ -222,7 +229,13 @@ class SignUpViewController: UIViewController {
                     //    self.performSegueWithIdentifier("main", sender: self)
                    // }
                 
-                    //when user signs in.....
+                        
+                    //if signin navagate to store
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vC: StoreViewController = storyBoard.instantiateViewControllerWithIdentifier("store") as! StoreViewController
+                        let navigationController = UINavigationController(rootViewController: vC)
+                        self.presentViewController(navigationController, animated: true, completion: nil)
+                    
                     
                     
                 } else {
@@ -398,6 +411,13 @@ class SignUpViewController: UIViewController {
 
         
         
+    }
+    
+    
+    //function to remove keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     

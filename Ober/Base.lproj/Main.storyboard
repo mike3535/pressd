@@ -24,7 +24,109 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="-408"/>
+            <point key="canvasLocation" x="226" y="-424"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="ZN3-ql-xK3">
+            <objects>
+                <viewController storyboardIdentifier="store" id="r6Q-0O-sLU" customClass="StoreViewController" customModule="Pressd" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LdZ-Ga-wOH"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Qk-eP-xOM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0r0-Od-rCX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="store kid" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sX7-x2-VH2">
+                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="ZKG-VZ-JGR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sX7-x2-VH2" firstAttribute="centerX" secondItem="0r0-Od-rCX" secondAttribute="centerX" id="rWy-j6-5PF"/>
+                            <constraint firstItem="sX7-x2-VH2" firstAttribute="centerY" secondItem="0r0-Od-rCX" secondAttribute="centerY" id="sHO-RN-RfS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Store" id="k60-st-PTQ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="hwW-wa-ONz">
+                            <connections>
+                                <action selector="popOver:" destination="r6Q-0O-sLU" id="WMU-hl-nPg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="M0X-Ob-oxS" kind="popoverPresentation" identifier="showPopOver" popoverAnchorBarButtonItem="hwW-wa-ONz" id="8v0-5N-3yk">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMK-97-dJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3126" y="-753"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="RtD-7w-luG">
+            <objects>
+                <viewController id="M0X-Ob-oxS" customClass="PopUpViewController" customModule="Pressd" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pb9-ds-Pbp"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Xi-A7-seN"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="KNu-vk-Zgp">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoM-Xd-RLU">
+                                <rect key="frame" x="20" y="28" width="104" height="30"/>
+                                <state key="normal" title="Store">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Acn-85-Dlf" kind="show" id="uWX-7k-Anc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nO-an-al2">
+                                <rect key="frame" x="20" y="66" width="104" height="30"/>
+                                <state key="normal" title="Blog">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fus-af-jFY" kind="show" id="Q9V-7L-QHg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjV-d2-gah">
+                                <rect key="frame" x="20" y="104" width="104" height="30"/>
+                                <state key="normal" title="Custom Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYD-By-rlZ">
+                                <rect key="frame" x="20" y="142" width="104" height="30"/>
+                                <state key="normal" title="LogOut">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut:" destination="M0X-Ob-oxS" eventType="touchUpInside" id="U1P-On-K6G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.61217672413793101" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="300"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihl-hC-30g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4115" y="-565"/>
         </scene>
         <!--SignIn-->
         <scene sceneID="GJV-HF-Akr">
@@ -107,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gd8-pS-NKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831" y="300"/>
+            <point key="canvasLocation" x="1847" y="-408"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UHA-k6-wIE">
@@ -125,10 +227,96 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUf-pL-wOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="300"/>
+            <point key="canvasLocation" x="1031" y="-408"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="inH-HG-CLz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Acn-85-Dlf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="23M-SS-OEi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OFy-Ag-DY2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r6Q-0O-sLU" kind="relationship" relationship="rootViewController" id="Ju3-TC-66D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlJ-YJ-Dzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3126" y="-1601"/>
+        </scene>
+        <!--Blog-->
+        <scene sceneID="Au1-LG-N5W">
+            <objects>
+                <viewController id="k0f-V2-I1U" customClass="BlogViewController" customModule="Pressd" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ww-92-6dB"/>
+                        <viewControllerLayoutGuide type="bottom" id="NZX-wY-y0p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iP9-Hb-Yk3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HI" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S8m-K2-kW6">
+                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Ajl-d3-UmP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S8m-K2-kW6" firstAttribute="centerY" secondItem="iP9-Hb-Yk3" secondAttribute="centerY" id="5YM-uS-2hY"/>
+                            <constraint firstItem="S8m-K2-kW6" firstAttribute="centerX" secondItem="iP9-Hb-Yk3" secondAttribute="centerX" id="x3y-CO-rVY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blog" id="4jS-KX-JnT">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="2YF-aC-bc0">
+                            <connections>
+                                <action selector="popOver:" destination="k0f-V2-I1U" id="rDf-Pm-VKL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <segue destination="M0X-Ob-oxS" kind="popoverPresentation" identifier="showPopOver" popoverAnchorBarButtonItem="2YF-aC-bc0" id="KJO-zx-bLa">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9z-ZU-xfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5670" y="-1119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vns-ca-DjE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fus-af-jFY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="loK-KG-Gbv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k0f-V2-I1U" kind="relationship" relationship="rootViewController" id="BME-zx-Lbu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ec-IA-apa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4930" y="-1647"/>
         </scene>
     </scenes>
     <resources>
         <image name="pressd1.png" width="851" height="315"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8v0-5N-3yk"/>
+    </inferredMetricsTieBreakers>
 </document>
