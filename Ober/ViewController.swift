@@ -16,18 +16,25 @@ class ViewController: UIViewController {
 
     @IBOutlet var videoView: UIView!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var currentUser = PFUser.currentUser()
+   /*   var currentUser = PFUser.currentUser()
         
         if currentUser != nil {
             
             print("segue to store")
-            self.setupView() ///////////////////////////////////////////////////////////
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("store") as! StoreViewController
+            self.presentViewController(vc, animated: true, completion: nil)
+          
        
         
-        } else {
+        } else {   */
             
             //call setupView
             self.setupView()
@@ -36,7 +43,7 @@ class ViewController: UIViewController {
         
         
        
-        }
+       // }
         
         
 
@@ -78,7 +85,7 @@ class ViewController: UIViewController {
         
         
         //replay video when it ends
-        let player: AVPlayerItem = notification.object as! AVPlayerItem
+       // let player: AVPlayerItem = notification.object as! AVPlayerItem
         //  player.seekToTime(kCMTimeZero)
         
        

@@ -147,7 +147,7 @@ class SignUpViewController: UIViewController , UITextFieldDelegate {
             }else{
                 
                 //Registering from parse
-                var user = PFUser()
+                let user = PFUser()
                 
                 
                 //rows you want in parse
@@ -404,9 +404,9 @@ class SignUpViewController: UIViewController , UITextFieldDelegate {
         //go back to cover page
         let vc = storyboard.instantiateViewControllerWithIdentifier("cover")
         
-        let navigationController = UINavigationController(rootViewController: vc)
+        //let navigationController = UINavigationController(rootViewController: vc)
         
-        self.presentViewController(navigationController, animated: true, completion: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
         
 
         

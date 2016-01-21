@@ -12,7 +12,7 @@ import Bolts
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
@@ -23,10 +23,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Parse.
         Parse.setApplicationId("t5x19yZI5Q64AktX1Ho9YPF2oWcalS7EHnvQcDuX",
             clientKey: "vaMOFbN84DxLdCFwpWWPscBu0xdYb7iOUTRQ1CXy")
+        
+        
+        
+        
+        //if user is still signed in
+        let currentUser = PFUser.currentUser()
+
+        if currentUser != nil {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("store") as! StoreViewController
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.window?.rootViewController = navigationController
+            self.window?.makeKeyAndVisible()
+            
+        }
+        
   
         
         return true
     }
+    
+    
+    
+    
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

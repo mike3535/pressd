@@ -40,16 +40,32 @@ class StoreViewController: UIViewController, UIPopoverPresentationControllerDele
         if segue.identifier == "showPopOver"
         {
             
-            var vc = segue.destinationViewController as! UIViewController
+            let vc = segue.destinationViewController 
             
-            var controller = vc.popoverPresentationController
+            let controller = vc.popoverPresentationController
             
             if controller != nil
             {
                 controller?.delegate = self
             }
             
+        }else{
+            
+            //if segue is to go to storeitemviewcontroller
+            if segue.identifier == "showStoreItem"
+            {
+                let indexPaths = self.storeCollectionView!.indexPathsForSelectedItems()!
+                let indexPath = indexPaths[0] as NSIndexPath
+                
+                
+                let vc = segue.destinationViewController as! StoreItemViewController
+                
+                vc.image = self.imageArray[indexPath.row]!
+                vc.title = self.products[indexPath.row]
+            }
+            
         }
+        
             
     }
     
@@ -60,10 +76,62 @@ class StoreViewController: UIViewController, UIPopoverPresentationControllerDele
     //////////////////////////
     
     
+    // code for collectionView///////////
+    @IBOutlet weak var storeCollectionView: UICollectionView!
+    
+    let products = ["Tee", "Hoodie", "Pressd"]
+    
+    let imageArray = [UIImage(named: "tee.png"), UIImage(named: "hoodie.png"), UIImage(named: "pressd.png")]
+    
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return self.products.count
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("storeCell", forIndexPath: indexPath) as! StoreCollectionViewCell
+        
+        cell.storeImageView?.image = self.imageArray[indexPath.row]
+        
+        cell.storeLabel?.text = self.products[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        self.performSegueWithIdentifier("showStoreItem", sender: self)
+    }
+    
+    
+    
+    
+    
+ /*  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        
+        if segue.identifier == "showStoreItem"
+        {
+            let indexPaths = self.storeCollectionView!.indexPathsForSelectedItems()!
+            let indexPath = indexPaths[0] as NSIndexPath
+            
+            
+            let vc = segue.destinationViewController as! StoreItemViewController
+            
+            vc.image = self.imageArray[indexPath.row]!
+            vc.title = self.products[indexPath.row]
+        }
+        
+    }*/
     
 
-    
-    
     
     
     
