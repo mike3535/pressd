@@ -16,6 +16,12 @@ class BlogViewController: UIViewController, UIPopoverPresentationControllerDeleg
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        let url = NSURL (string: "http://www.pressdapparel.com/blog/");
+        let requestObj = NSURLRequest(URL: url!);
+        webView.loadRequest(requestObj);
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +65,20 @@ class BlogViewController: UIViewController, UIPopoverPresentationControllerDeleg
         return .None
     }
     //////////////////////////
+    
+    
+    
+    
+    @IBOutlet weak var webView: UIWebView!
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     /*
